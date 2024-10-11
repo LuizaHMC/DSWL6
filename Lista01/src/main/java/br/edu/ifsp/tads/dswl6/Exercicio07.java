@@ -1,7 +1,6 @@
 package br.edu.ifsp.tads.dswl6;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -10,7 +9,7 @@ import java.io.PrintWriter;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet("/acesso")
+
 public class Exercicio07 extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private Map<String, Integer> acessosPorUsuario = new HashMap<>();
@@ -23,7 +22,7 @@ public class Exercicio07 extends HttpServlet {
 
         response.setContentType("text/html");
         PrintWriter out = response.getWriter();
-        out.println("<html><h1>Contador de Acessos por Usu·rio</h1><ul>");
+        out.println("<html><h1>Contador de Acessos por Usu√°rio</h1><ul>");
         for (Map.Entry<String, Integer> entry : acessosPorUsuario.entrySet()) {
             out.println("<li>" + entry.getKey() + " acessou " + entry.getValue() + " vezes.</li>");
         }

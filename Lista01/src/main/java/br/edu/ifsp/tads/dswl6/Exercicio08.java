@@ -1,7 +1,6 @@
 package br.edu.ifsp.tads.dswl6;
 
 import jakarta.servlet.ServletException;
-import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -10,7 +9,7 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.List;
 
-@WebServlet("/produtos")
+
 public class Exercicio08 extends HttpServlet {
     private static final long serialVersionUID = 1L;
     private List<Produto> produtos = new ArrayList<>();
@@ -31,7 +30,7 @@ public class Exercicio08 extends HttpServlet {
         PrintWriter out = response.getWriter();
         out.println("<html><h1>Lista de Produtos</h1><ul>");
         for (Produto p : produtos) {
-            out.println("<li>" + p.getNome() + " - " + p.getPreco() + "</li>");
+            out.println("<li>" + p.getNome() + " - " + p.getPreco() + " reais</li>");
         }
         out.println("</ul></html>");
     }
