@@ -43,4 +43,81 @@
     <url-pattern>/login</url-pattern>
   </servlet-mapping>
   
+  <!-- Exercicio 04: Contador de Acessos -->
+  <servlet>
+    <display-name>Exercicio04</display-name>
+    <servlet-name>Exercicio04</servlet-name>
+    <servlet-class>br.edu.ifsp.tads.dswl6.Exercicio04</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercicio04</servlet-name>
+    <url-pattern>/contadorAcessos</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Exercicio 05: Armazenar Nomes em ArrayList via GET -->
+  <servlet>
+    <display-name>Exercicio05</display-name>
+    <servlet-name>Exercicio05</servlet-name>
+    <servlet-class>br.edu.ifsp.tads.dswl6.Exercicio05</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercicio05</servlet-name>
+    <url-pattern>/addNome</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Exercicio 06: Armazenar Comentários com POST e Exibir Comentários -->
+  <servlet>
+    <display-name>Exercicio06</display-name>
+    <servlet-name>Exercicio06</servlet-name>
+    <servlet-class>br.edu.ifsp.tads.dswl6.Exercicio06</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercicio06</servlet-name>
+    <url-pattern>/comentarios</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Exercicio 07: Contador de Acessos por Usuário -->
+  <servlet>
+    <display-name>Exercicio07</display-name>
+    <servlet-name>Exercicio07</servlet-name>
+    <servlet-class>br.edu.ifsp.tads.dswl6.Exercicio07</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercicio07</servlet-name>
+    <url-pattern>/acesso</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Exercicio 08: Cadastro de Produtos -->
+  <servlet>
+    <display-name>Exercicio08</display-name>
+    <servlet-name>Exercicio08</servlet-name>
+    <servlet-class>br.edu.ifsp.tads.dswl6.Exercicio08</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercicio08</servlet-name>
+    <url-pattern>/produtos</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Exercicio 09: Remover Nomes de um ArrayList via GET -->
+  <servlet>
+    <display-name>Exercicio09</display-name>
+    <servlet-name>Exercicio09</servlet-name>
+    <servlet-class>br.edu.ifsp.tads.dswl6.Exercicio09</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercicio09</servlet-name>
+    <url-pattern>/removeNome</url-pattern>
+  </servlet-mapping>
+  
+  <!-- Exercicio 10: Lista de Tarefas -->
+  <servlet>
+    <display-name>Exercicio10</display-name>
+    <servlet-name>Exercicio10</servlet-name>
+    <servlet-class>br.edu.ifsp.tads.dswl6.Exercicio10</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Exercicio10</servlet-name>
+    <url-pattern>/tarefas</url-pattern>
+  </servlet-mapping>
+  
 </web-app>
