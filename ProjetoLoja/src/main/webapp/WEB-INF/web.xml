@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_6_0.xsd" id="WebApp_ID" version="6.0">
+  <display-name>Loja</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>ClienteServlet</display-name>
+    <servlet-name>ClienteServlet</servlet-name>
+    <servlet-class>com.example.shoppingcart.servlet.ClienteServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ClienteServlet</servlet-name>
+    <url-pattern>/ClienteServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>ProdutoServlet</display-name>
+    <servlet-name>ProdutoServlet</servlet-name>
+    <servlet-class>com.example.shoppingcart.servlet.ProdutoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>ProdutoServlet</servlet-name>
+    <url-pattern>/ProdutoServlet</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>CarrinhoServlet</display-name>
+    <servlet-name>CarrinhoServlet</servlet-name>
+    <servlet-class>com.example.shoppingcart.servlet.CarrinhoServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>CarrinhoServlet</servlet-name>
+    <url-pattern>/CarrinhoServlet</url-pattern>
+  </servlet-mapping>
+</web-app>
