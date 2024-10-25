@@ -17,7 +17,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ClienteServlet</servlet-name>
-    <url-pattern>/ClienteServlet</url-pattern>
+    <url-pattern>/clientes</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -27,7 +27,7 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>ProdutoServlet</servlet-name>
-    <url-pattern>/ProdutoServlet</url-pattern>
+    <url-pattern>/produtos</url-pattern>
   </servlet-mapping>
   <servlet>
     <description></description>
@@ -37,6 +37,6 @@
   </servlet>
   <servlet-mapping>
     <servlet-name>CarrinhoServlet</servlet-name>
-    <url-pattern>/CarrinhoServlet</url-pattern>
+    <url-pattern>/carrinhos</url-pattern>
   </servlet-mapping>
 </web-app>
