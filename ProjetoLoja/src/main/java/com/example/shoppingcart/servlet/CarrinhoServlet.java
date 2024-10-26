@@ -29,10 +29,10 @@ public class CarrinhoServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        String id = request.getParameter("id");
-        String clienteId = request.getParameter("clienteId");
+        int id = Integer.parseInt(request.getParameter("id"));
+        int clienteId = Integer.parseInt(request.getParameter("clienteId"));
         Cliente cliente = clienteDTO.list().stream()
-                                    .filter(c -> c.getId().equals(clienteId))
+                                    .filter(c -> c.getId() == clienteId)
                                     .findFirst()
                                     .orElse(null);
 

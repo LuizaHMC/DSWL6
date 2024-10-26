@@ -1,7 +1,12 @@
 package com.example.shoppingcart.model;
+import com.example.shoppingcart.utils.ConnectionFactory;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Cliente {
-    private String id;
+    private int id;
     private String nome;
     private String email;
 
@@ -9,18 +14,18 @@ public class Cliente {
     public Cliente() {}
 
     // Construtor com parâmetros
-    public Cliente(String id, String nome, String email) {
+    public Cliente(int id, String nome, String email) {
         this.id = id;
         this.nome = nome;
         this.email = email;
     }
 
     // Getters e Setters
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -6,6 +6,7 @@
     <title>Shopping Cart - Home</title>
 </head>
 <body>
+    
     <h1>Bem-vindo ao Sistema de Carrinho de Compras</h1>
     <nav>
         <ul>

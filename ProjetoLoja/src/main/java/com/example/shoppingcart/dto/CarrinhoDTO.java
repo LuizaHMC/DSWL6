@@ -20,7 +20,7 @@ public class CarrinhoDTO implements IDTO<Carrinho>{
     @Override
     public void update(Carrinho carrinho) {
         for (int i = 0; i < carrinhos.size(); i++) {
-            if (carrinhos.get(i).getId().equals(carrinho.getId())) {
+            if (carrinhos.get(i).getId() == carrinho.getId()) {
                 carrinhos.set(i, carrinho);
                 break;
             }
@@ -36,7 +36,7 @@ public class CarrinhoDTO implements IDTO<Carrinho>{
     public List<Carrinho> listByCliente(Cliente cliente) {
         List<Carrinho> carrinhosDoCliente = new ArrayList<>();
         for (Carrinho carrinho : carrinhos) {
-            if (carrinho.getCliente().getId().equals(cliente.getId())) {
+            if (carrinho.getCliente().getId() == cliente.getId()) {
                 carrinhosDoCliente.add(carrinho);
             }
         }
@@ -47,7 +47,7 @@ public class CarrinhoDTO implements IDTO<Carrinho>{
     public List<Produto> listProdutosByCliente(Cliente cliente) {
         List<Produto> produtosDoCliente = new ArrayList<>();
         for (Carrinho carrinho : carrinhos) {
-            if (carrinho.getCliente().getId().equals(cliente.getId())) {
+            if (carrinho.getCliente().getId() == cliente.getId()) {
                 produtosDoCliente.addAll(carrinho.getProdutos());
             }
         }

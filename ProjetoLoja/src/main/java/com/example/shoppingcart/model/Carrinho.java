@@ -3,7 +3,7 @@ package com.example.shoppingcart.model;
 import java.util.List;
 
 public class Carrinho {
-    private String id;
+    private int id;
     private Cliente cliente; // O cliente dono do carrinho
     private List<Produto> produtos; // Lista de produtos no carrinho
 
@@ -11,18 +11,18 @@ public class Carrinho {
     public Carrinho() {}
 
     // Construtor com parâmetros
-    public Carrinho(String id, Cliente cliente, List<Produto> produtos) {
+    public Carrinho(int id, Cliente cliente, List<Produto> produtos) {
         this.id = id;
         this.cliente = cliente;
         this.produtos = produtos;
     }
 
     // Getters e Setters
-    public String getId() {
+    public int getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(int id) {
         this.id = id;
     }
 
