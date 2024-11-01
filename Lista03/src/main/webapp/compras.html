@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Compras</title>
+</head>
+<body>
+    <h1>Gerenciamento de Compras</h1>
+
+    <a href="index.html">Voltar para a página inicial</a>
+
+    <h2>Adicionar Produto à Lista de Compras</h2>
+    <form action="compras" method="post">
+        <input type="hidden" name="acao" value="adicionar">
+        <label for="clienteId">ID do Cliente:</label>
+        <input type="number" id="clienteId" name="clienteId" required>
+        <label for="produtoId">ID do Produto:</label>
+        <input type="number" id="produtoId" name="produtoId" required>
+        <button type="submit">Adicionar Produto</button>
+    </form>
+
+    <h2>Listar Produtos Comprados</h2>
+    <form action="compras" method="get">
+        <label for="clienteIdListar">ID do Cliente:</label>
+        <input type="number" id="clienteIdListar" name="clienteId" required>
+        <button type="submit">Listar Produtos Comprados</button>
+    </form>
+
+    <h2>Remover Produto da Lista de Compras</h2>
+    <form action="compras" method="post">
+        <input type="hidden" name="acao" value="remover">
+        <label for="clienteIdRemover">ID do Cliente:</label>
+        <input type="number" id="clienteIdRemover" name="clienteId" required>
+        <label for="produtoIdRemover">ID do Produto:</label>
+        <input type="number" id="produtoIdRemover" name="produtoId" required>
+        <button type="submit">Remover Produto</button>
+    </form>
+
+</body>
+</html>

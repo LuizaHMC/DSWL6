@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Clientes</title>
+</head>
+<body>
+    <h1>Gerenciamento de Clientes</h1>
+
+    <a href="index.html">Voltar para a página inicial</a>
+    
+    <form action="clientes" method="post">
+    <label for="nome">Listar Clientes:</label>
+    <button type="submit">Listar</button>   
+
+    </form>
+
+    <h2>Criar Novo Cliente</h2>
+    <form action="clientes" method="post">
+        <input type="hidden" name="acao" value="criar">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>   
+
+        <button type="submit">Criar</button>   
+
+    </form>
+
+    <h2>Editar Cliente</h2>
+    <form action="clientes" method="post">
+        <input type="hidden" name="acao" value="editar">
+        <label for="nome">Nome Antigo:</label>
+        <input type="text" id="nomeAntigo" name="nomeAntigo" required>
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome" required>
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>   
+
+        <button type="submit">Salvar</button>
+    </form>   
+
+
+    <h2>Excluir Cliente</h2>
+    <form action="clientes" method="post">
+        <input type="hidden" name="acao" value="excluir">
+        <label for="nome">Nome:</label>
+        <input type="text" id="nome" name="nome"> 
+        <button type="submit">Excluir</button>
+    </form>
+</body>
+</html>
