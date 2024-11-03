@@ -30,7 +30,7 @@ public class ProjetoServlet extends HttpServlet {
         String nome = request.getParameter("nome");
         String descricao = request.getParameter("descricao");
 
-        // Usando java.sql.Date
+        
         java.sql.Date dataInicio = java.sql.Date.valueOf(request.getParameter("dataInicio"));
         java.sql.Date dataFim = java.sql.Date.valueOf(request.getParameter("dataFim"));
 

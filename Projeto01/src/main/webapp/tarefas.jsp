@@ -15,7 +15,7 @@
             <th>Descrição</th>
             <th>Data de Início</th>
             <th>Data de Fim</th>
-            <th>Concluída</th> <!-- Nova coluna para marcar como concluída -->
+            <th>Concluída</th> 
         </tr>
         <c:forEach var="tarefa" items="${tarefas}">
 		    <tr>
@@ -30,7 +30,7 @@
 		                <input type="hidden" name="membroId" value="${membro.id}">
 		                <input type="checkbox" name="concluida" 
 					       <c:if test="${tarefa.concluida}">checked="checked"</c:if> 
-					       		onclick="this.form.submit()"><!-- Checkbox para marcar a tarefa como concluída -->
+					       		onclick="this.form.submit()">
 		            </form>
 		        </td>
 		    </tr>

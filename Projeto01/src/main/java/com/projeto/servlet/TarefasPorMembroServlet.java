@@ -23,7 +23,7 @@ public class TarefasPorMembroServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        int membroId = Integer.parseInt(request.getParameter("id")); // ID do membro
+        int membroId = Integer.parseInt(request.getParameter("id")); 
         
         List<Tarefa> tarefas = tarefaDTO.listByDono(membroId);
         request.setAttribute("tarefas", tarefas);

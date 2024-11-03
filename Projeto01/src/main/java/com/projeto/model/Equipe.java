@@ -3,8 +3,8 @@ package com.projeto.model;
 public class Equipe {
     private int id;
     private String nome;
-    private String sobrenome; // Novo atributo
-    private String email; // Novo atributo
+    private String sobrenome; 
+    private String email; 
     private String cargo;
 
     // Getters e Setters

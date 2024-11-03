@@ -12,7 +12,7 @@ public class Tarefa {
     private Integer donoId; 
     private boolean concluida;
     
-    // Getters e Setters para todos os campos
+    // Getters e Setters 
     public int getId() {
         return id;
     }
@@ -66,8 +66,7 @@ public class Tarefa {
     }
 
     public void setDonoId(Integer donoId) {
-        this.donoId = donoId; // Permite que dono seja nulo
-    }
+        this.donoId = donoId;     }
     
     public boolean isConcluida() {
         return concluida;

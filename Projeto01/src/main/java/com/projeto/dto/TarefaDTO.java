@@ -19,15 +19,15 @@ public class TarefaDTO implements IDTO<Tarefa> {
 	        stmt.setDate(4, new java.sql.Date(tarefa.getDataFim().getTime()));
 	        stmt.setInt(5, tarefa.getProjetoId());
 
-	        // Define dono como nulo se for null, ou usa o valor
+	        
 	        if (tarefa.getDonoId() != null) {
 	            stmt.setInt(6, tarefa.getDonoId().intValue());
 	        } else {
 	            stmt.setNull(6, java.sql.Types.INTEGER);
 	        }
 
-	        // Adicionando o campo concluida
-	        stmt.setBoolean(7, tarefa.isConcluida()); // Certifique-se de que o método `isConcluida` existe na classe Tarefa
+	        
+	        stmt.setBoolean(7, tarefa.isConcluida()); 
 	        
 	        stmt.executeUpdate();
 	    } catch (SQLException e) {
@@ -62,8 +62,8 @@ public class TarefaDTO implements IDTO<Tarefa> {
                 tarefa.setDataInicio(rs.getDate("data_inicio"));
                 tarefa.setDataFim(rs.getDate("data_fim"));
                 tarefa.setProjetoId(rs.getInt("projeto_id"));
-                tarefa.setDonoId(rs.getInt("dono_id"));// Adicionando a leitura do campo 'dono'
-                tarefa.setConcluida(rs.getBoolean("concluida")); // Lendo o campo 'concluida'
+                tarefa.setDonoId(rs.getInt("dono_id"));
+                tarefa.setConcluida(rs.getBoolean("concluida")); 
                 tarefas.add(tarefa);
             }
         } catch (SQLException e) {
@@ -88,7 +88,7 @@ public class TarefaDTO implements IDTO<Tarefa> {
                     tarefa.setDataInicio(rs.getDate("data_inicio"));
                     tarefa.setDataFim(rs.getDate("data_fim"));
                     tarefa.setProjetoId(rs.getInt("projeto_id"));
-                    tarefa.setDonoId(rs.getInt("dono_id")); // Adicionando a leitura do campo 'dono'
+                    tarefa.setDonoId(rs.getInt("dono_id"));
                     tarefa.setConcluida(rs.getBoolean("concluida"));
                     tarefas.add(tarefa);
                 }
@@ -115,7 +115,7 @@ public class TarefaDTO implements IDTO<Tarefa> {
                     tarefa.setDataInicio(rs.getDate("data_inicio"));
                     tarefa.setDataFim(rs.getDate("data_fim"));
                     tarefa.setProjetoId(rs.getInt("projeto_id"));
-                    tarefa.setDonoId(rs.getInt("dono_id")); // Adicionando a leitura do campo 'dono'
+                    tarefa.setDonoId(rs.getInt("dono_id")); 
                     tarefa.setConcluida(rs.getBoolean("concluida"));
                 }
             }
@@ -125,7 +125,7 @@ public class TarefaDTO implements IDTO<Tarefa> {
         return tarefa;
     }
     
- // Método para buscar tarefas por dono
+
     public List<Tarefa> listByDono(int donoId) {
         List<Tarefa> tarefas = new ArrayList<>();
         String sql = "SELECT * FROM tarefas WHERE dono_id = ? ORDER BY nome";
@@ -182,7 +182,7 @@ public class TarefaDTO implements IDTO<Tarefa> {
 	            tarefa.setDataInicio(rs.getDate("data_inicio"));
 	            tarefa.setDataFim(rs.getDate("data_fim"));
 	            tarefa.setProjetoId(rs.getInt("projeto_id"));
-	            tarefa.setDonoId(rs.getInt("dono_id")); // Adicionando a leitura do campo 'dono'
+	            tarefa.setDonoId(rs.getInt("dono_id"));
 	            tarefa.setConcluida(rs.getBoolean("concluida"));
 	            tarefas.add(tarefa);
 	        }

@@ -22,10 +22,10 @@ public class TarefaServlet extends HttpServlet {
             throws ServletException, IOException {
         String action = request.getParameter("action");
         
-        // Coleta a lista de projetos
+        
         
         List<Projeto> projetos = projetoDTO.list();
-        request.setAttribute("projetos", projetos); // Adiciona a lista de projetos ao request
+        request.setAttribute("projetos", projetos); 
         
         if ("nova".equals(action)) {
             RequestDispatcher dispatcher = request.getRequestDispatcher("tarefa-nova.jsp");
@@ -44,12 +44,11 @@ public class TarefaServlet extends HttpServlet {
         java.sql.Date dataInicio = java.sql.Date.valueOf(request.getParameter("dataInicio"));
         java.sql.Date dataFim = java.sql.Date.valueOf(request.getParameter("dataFim"));
         int projetoId = Integer.parseInt(request.getParameter("projetoId"));
-        Integer donoId = null; // ou pegue o dono de onde for adequado
-        
-     // Inicializa uma variável de erro
+        Integer donoId = null;         
+     
         boolean erroOcorreu = false;
         
-     // Verifique se o projeto existe
+     
         if (projetoDTO.getById(projetoId) == null) {
             request.setAttribute("errorMessage", "Projeto não encontrado.");
             request.getRequestDispatcher("tarefa-list.jsp").forward(request, response);
@@ -62,7 +61,7 @@ public class TarefaServlet extends HttpServlet {
         tarefa.setDataInicio(dataInicio);
         tarefa.setDataFim(dataFim);
         tarefa.setProjetoId(projetoId);
-        tarefa.setDonoId(donoId); // Defina o dono, se aplicável
+        tarefa.setDonoId(donoId); 
 
         tarefaDTO.save(tarefa);
         response.sendRedirect("tarefa-list.jsp");

@@ -49,7 +49,7 @@ public class EquipeDTO implements IDTO<Equipe> {
     
     public List<Equipe> listNames() {
         List<Equipe> membros = new ArrayList<>();
-        String sql = "SELECT id, nome FROM equipe"; // Apenas seleciona id e nome
+        String sql = "SELECT id, nome FROM equipe";
         try (Connection conn = ConnectionFactory.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
@@ -102,14 +102,13 @@ public class EquipeDTO implements IDTO<Equipe> {
     }
 
     public void add(Equipe membro) {
-        // Este método pode ser uma cópia do método save, mas como você já tem o save, pode usar este para chamar o save se necessário.
         save(membro);
     }
 
 
 	@Override
 	public List<Tarefa> listByProjeto(int projetoId) {
-		// TODO Auto-generated method stub
+		
 		return null;
 	}
 

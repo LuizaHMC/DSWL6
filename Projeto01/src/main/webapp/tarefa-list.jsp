@@ -2,11 +2,11 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ page import="java.util.List" %>
 <%@ page import="com.projeto.dto.ProjetoDTO" %>
-<%@ page import="com.projeto.dto.EquipeDTO" %> <!-- Importando o DTO de membros -->
-<%@ page import="com.projeto.dto.TarefaDTO" %> <!-- Importando o DTO de membros -->
+<%@ page import="com.projeto.dto.EquipeDTO" %> 
+<%@ page import="com.projeto.dto.TarefaDTO" %> 
 <%@ page import="com.projeto.model.Projeto" %>
 <%@ page import="com.projeto.model.Tarefa" %>
-<%@ page import="com.projeto.model.Equipe" %> <!-- Importando o modelo de membro -->
+<%@ page import="com.projeto.model.Equipe" %> 
 <%
     ProjetoDTO projetoDTO = new ProjetoDTO();
     List<Projeto> projetos = projetoDTO.list();
@@ -91,7 +91,7 @@
 </form>
 
 <h2>Adicionar Membro à Tarefa</h2>
-<form action="AdicionarMembro" method="post"> <!-- Alterar para o servlet de adição -->
+<form action="AdicionarMembro" method="post"> 
     <label for="tarefaId">Selecione a Tarefa:</label>
     <select name="tarefaId" required>
         <option value="">Selecione uma tarefa</option>

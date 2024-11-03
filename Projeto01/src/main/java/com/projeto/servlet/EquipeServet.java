@@ -32,11 +32,11 @@ public class EquipeServet extends HttpServlet {
         EquipeDTO equipeDTO = new EquipeDTO();
         List<Equipe> membros = equipeDTO.list();
         
-        // Adicione as listas ao request
+        
         request.setAttribute("projetos", projetos);
         request.setAttribute("membros", membros);
         
-        RequestDispatcher dispatcher = request.getRequestDispatcher("equipes-list.jsp"); // Ajuste o caminho do JSP
+        RequestDispatcher dispatcher = request.getRequestDispatcher("equipes-list.jsp");
         dispatcher.forward(request, response);
     }
 
@@ -46,18 +46,18 @@ public class EquipeServet extends HttpServlet {
         String email = request.getParameter("email");
         String cargo = request.getParameter("cargo");
 
-        // Criar um novo membro da equipe
+        
         Equipe membro = new Equipe();
         membro.setNome(nome);
         membro.setSobrenome(sobrenome);
         membro.setEmail(email);
         membro.setCargo(cargo);
 
-        // Usar DTO para salvar membro no banco de dados
+        
         EquipeDTO equipeDTO = new EquipeDTO();
-        equipeDTO.save(membro); // Adicionar membro ao banco de dados
+        equipeDTO.save(membro);
 
-        // Redirecionar para listar membros
-        response.sendRedirect("equipes?action=list"); // Use um método apropriado para listar membros
+        
+        response.sendRedirect("equipes?action=list"); 
     }
 }

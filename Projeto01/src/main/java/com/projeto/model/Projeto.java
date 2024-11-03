@@ -9,7 +9,7 @@ public class Projeto {
     private Date dataInicio;
     private Date dataFim;
 
-    // Getter e Setter para o atributo id
+    // Getters e Setters 
     public int getId() {
         return id;
     }
@@ -18,7 +18,7 @@ public class Projeto {
         this.id = id;
     }
 
-    // Getter e Setter para o atributo nome
+    
     public String getNome() {
         return nome;
     }
@@ -27,7 +27,6 @@ public class Projeto {
         this.nome = nome;
     }
 
-    // Getter e Setter para o atributo descricao
     public String getDescricao() {
         return descricao;
     }
@@ -36,7 +35,7 @@ public class Projeto {
         this.descricao = descricao;
     }
 
-    // Getter e Setter para o atributo dataInicio
+    
     public Date getDataInicio() {
         return dataInicio;
     }
@@ -45,7 +44,7 @@ public class Projeto {
         this.dataInicio = dataInicio;
     }
 
-    // Getter e Setter para o atributo dataFim
+    
     public Date getDataFim() {
         return dataFim;
     }

@@ -21,7 +21,7 @@ public class MarcarTarefaConcluidaServlet extends HttpServlet {
 	        String idParam = request.getParameter("id");
 	        
 	        if (idParam == null || idParam.isEmpty()) {
-	            // Retornar um erro ou redirecionar
+	            
 	            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "ID da tarefa não pode ser vazio.");
 	            return;
 	        }
@@ -30,20 +30,20 @@ public class MarcarTarefaConcluidaServlet extends HttpServlet {
 	        try {
 	            tarefaId = Integer.parseInt(idParam);
 	        } catch (NumberFormatException e) {
-	            // Retornar um erro ou redirecionar
+	            
 	            response.sendError(HttpServletResponse.SC_BAD_REQUEST, "ID da tarefa inválido.");
 	            return;
 	        }
 
-	        boolean concluida = request.getParameter("concluida") != null; // Verifica se a checkbox foi marcada
+	        boolean concluida = request.getParameter("concluida") != null; 
 
-	        tarefaDTO.marcarComoConcluida(tarefaId, concluida); // Método para atualizar o status da tarefa
+	        tarefaDTO.marcarComoConcluida(tarefaId, concluida); 
 	       
 
 	        System.out.println("ID da Tarefa: " + tarefaId);
 	        System.out.println("Checkbox Concluída: " + concluida);
 	        
-	        response.sendRedirect("equipes"); // Redireciona de volta para a lista de tarefas
+	        response.sendRedirect("equipes"); 
 	    }
 
 }

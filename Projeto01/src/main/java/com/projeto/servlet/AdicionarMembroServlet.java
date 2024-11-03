@@ -36,13 +36,13 @@ public class AdicionarMembroServlet extends HttpServlet {
 	    System.out.println("membroId: " + membroIdStr);
 	    System.out.println("AdicionarMembroServlet chamado!");
 
-	    // Verifique se os IDs foram recebidos e converta para inteiro
+
 	    if (tarefaIdStr != null && membroIdStr != null) {
 	        try {
 	            int tarefaId = Integer.parseInt(tarefaIdStr);
 	            int membroId = Integer.parseInt(membroIdStr);
 
-	            // Adicionar o membro à tarefa usando os IDs
+	            
 	            try {
 	                atualizarDonoDaTarefa(tarefaId, membroId);
 	                request.setAttribute("successMessage", "Membro adicionado à tarefa com sucesso.");
@@ -56,31 +56,31 @@ public class AdicionarMembroServlet extends HttpServlet {
 	        request.setAttribute("errorMessage", "Os IDs da tarefa e do membro devem ser fornecidos.");
 	    }
 
-	    // Redirecionar ou retornar à página de formulário
+	    
 	    RequestDispatcher dispatcher = request.getRequestDispatcher("tarefa-list.jsp");
 	    dispatcher.forward(request, response);
 	}
 
     private void atualizarDonoDaTarefa(int tarefaId, int donoId) throws SQLException {
-        Connection conn = null; // Obtenha sua conexão com o banco de dados
+        Connection conn = null; 
         PreparedStatement pstmt = null;
         String sql = "UPDATE tarefas SET dono_id = ? WHERE id = ?";
 
         try {
-            // Configurar a conexão e preparar a instrução
-            conn = ConnectionFactory.getConnection(); // Exemplo de como obter a conexão
+            
+            conn = ConnectionFactory.getConnection(); 
             System.out.println("Conexão ao banco de dados estabelecida.");
 
             pstmt = conn.prepareStatement(sql);
-            pstmt.setInt(1, donoId); // Convertendo o ID do membro para inteiro
-            pstmt.setInt(2, tarefaId); // Convertendo o ID da tarefa para inteiro
+            pstmt.setInt(1, donoId); 
+            pstmt.setInt(2, tarefaId); 
 
             System.out.println("Preparando a execução da instrução SQL: " + pstmt.toString());
             int rowsAffected = pstmt.executeUpdate();
             System.out.println("Linhas afetadas: " + rowsAffected);
         } catch (SQLException e) {
             System.err.println("Erro durante a execução da instrução SQL: " + e.getMessage());
-            throw e; // Relança a exceção para tratamento posterior
+            throw e; 
         } finally {
             if (pstmt != null) {
                 pstmt.close();

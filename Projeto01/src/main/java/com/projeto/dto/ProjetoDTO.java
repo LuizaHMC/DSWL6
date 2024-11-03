@@ -26,7 +26,7 @@ public class ProjetoDTO implements IDTO<Projeto> {
 	        System.out.println("Número de linhas afetadas: " + rowsAffected);
 	        
 	    } catch (SQLException e) {
-	        e.printStackTrace();  // Isso imprimirá o stack trace do erro no console
+	        e.printStackTrace(); 
 	    }
 	}
 
@@ -64,7 +64,7 @@ public class ProjetoDTO implements IDTO<Projeto> {
             e.printStackTrace();
         }
         
-        System.out.println("Projetos encontrados: " + projetos.size()); // Adicione esta linha para depuração
+        System.out.println("Projetos encontrados: " + projetos.size()); 
         return projetos;
     }
 
