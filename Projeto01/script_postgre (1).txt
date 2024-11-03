@@ -24,7 +24,7 @@ CREATE TABLE tarefas (
     data_fim DATE NOT NULL,
     projeto_id INTEGER NOT NULL,
 	dono_id INTEGER,
-    FOREIGN KEY (projeto_id) REFERENCES projetos(id), -- Assumindo que a tabela projetos já existe
+    FOREIGN KEY (projeto_id) REFERENCES projetos(id), 
 	FOREIGN KEY (dono_id) REFERENCES equipe(id)
 );
 
