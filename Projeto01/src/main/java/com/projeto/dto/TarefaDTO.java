@@ -191,5 +191,19 @@ public class TarefaDTO implements IDTO<Tarefa> {
 	    }
 	    return tarefas;
 	}
+	
+	public void atualizarDonoDaTarefa(int tarefaId, int donoId) throws SQLException {
+        String sql = "UPDATE tarefas SET dono_id = ? WHERE id = ?";
+        try (Connection conn = ConnectionFactory.getConnection();
+             PreparedStatement pstmt = conn.prepareStatement(sql)) {
+
+            pstmt.setInt(1, donoId);
+            pstmt.setInt(2, tarefaId);
+
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            throw new SQLException("Erro ao atualizar o dono da tarefa", e);
+        }
+    }
 
 }
