@@ -25,6 +25,7 @@
                 <td>${membro.email}</td>
                 <td>${membro.cargo}</td>
                 <td><a href="tarefasPorMembro?id=${membro.id}">Ver Tarefas</a></td>
+                <td><a href="DeletarMembro?membroId=${membro.id}">Deletar membro</a></td>
             </tr>
         </c:forEach>
     </table>
