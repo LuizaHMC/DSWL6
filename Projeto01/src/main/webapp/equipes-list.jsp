@@ -9,6 +9,15 @@
 </head>
 <body>
     <h1>Lista de Membros da Equipe</h1>
+    
+    <!-- Exibir mensagem de sucesso ou erro -->
+    <c:if test="${not empty successMessage}">
+        <p style="color: green;">${successMessage}</p>
+    </c:if>
+    <c:if test="${not empty errorMessage}">
+        <p style="color: red;">${errorMessage}</p>
+    </c:if>
+    
     <table border="1">
         <tr>
             <th>ID</th>
