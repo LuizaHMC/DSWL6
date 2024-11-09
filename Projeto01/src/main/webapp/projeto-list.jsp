@@ -4,6 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Projetos</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1>Lista de Projetos</h1>
@@ -26,21 +27,22 @@
         </c:forEach>
     </table>
 
-    <h2>Adicionar Projeto</h2>
-    <form action="projetos" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" required><br>
-        <label for="descricao">Descrição:</label>
-        <input type="text" name="descricao" required><br>
-        <label for="dataInicio">Data Início:</label>
-        <input type="date" name="dataInicio" required><br>
-        <label for="dataFim">Data Fim:</label>
-        <input type="date" name="dataFim" required><br>
-        <button type="submit">Criar projeto</button>
-    </form>
+	<div class="group">
+	    <h2>Adicionar Projeto</h2>
+	    <form action="projetos" method="post">
+	        <label for="nome">Nome:</label>
+	        <input type="text" name="nome" required><br>
+	        <label for="descricao">Descrição:</label>
+	        <input type="text" name="descricao" required><br>
+	        <label for="dataInicio">Data Início:</label>
+	        <input type="date" name="dataInicio" required><br>
+	        <label for="dataFim">Data Fim:</label>
+	        <input type="date" name="dataFim" required><br>
+	        <button type="submit">Criar projeto</button>
+	    </form>
+    </div>
     
-    
-    <a href="index.jsp">Voltar</a>
+    <a class="voltar" href="index.jsp">Voltar</a>
     
 </body>
 </html>

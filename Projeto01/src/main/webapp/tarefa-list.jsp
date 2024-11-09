@@ -27,6 +27,7 @@
 <html>
 <head>
     <title>Lista de Tarefas</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
 <h2>Lista de Tarefas</h2>
@@ -65,6 +66,7 @@
     </tbody>
 </table>
 
+<div class="group">
 <h2>Adicionar Tarefa</h2>
 <form action="AdicionarTarefa" method="post">
     <label for="nome">Nome:</label>
@@ -89,7 +91,9 @@
 
     <button type="submit">Adicionar tarefa</button>
 </form>
+</div>
 
+<div class="group">
 <h2>Adicionar Membro à Tarefa</h2>
 <form action="AdicionarMembro" method="post"> 
     <label for="tarefaId">Selecione a Tarefa:</label>
@@ -109,8 +113,11 @@
 	</select><br>
 
     <button type="submit">Adicionar membro</button>
+    
 </form>
+</div>
 
-<a href="index.jsp">Voltar</a>
+<a class="voltar" href="index.jsp">Voltar</a>
+
 </body>
 </html>

@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Lista de Membros da Equipe</title>
-    <link rel="stylesheet" type="text/css" href="style.css"> <!-- Se você tiver um CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
     <h1>Lista de Membros da Equipe</h1>
@@ -33,30 +33,32 @@
                 <td>${membro.sobrenome}</td>
                 <td>${membro.email}</td>
                 <td>${membro.cargo}</td>
-                <td><a href="tarefasPorMembro?id=${membro.id}">Ver Tarefas</a></td>
-                <td><a href="DeletarMembro?membroId=${membro.id}">Deletar membro</a></td>
+                <td><a class="buttonAction" href="tarefasPorMembro?id=${membro.id}">Ver Tarefas</a></td>
+                <td><a class="buttonAction" href="DeletarMembro?membroId=${membro.id}">Deletar membro</a></td>
             </tr>
         </c:forEach>
     </table>
 
-    <h2>Adicionar Novo Membro</h2>
-    <form action="equipes" method="post">
-        <label for="nome">Nome:</label>
-        <input type="text" name="nome" required><br>
-
-        <label for="sobrenome">Sobrenome:</label>
-        <input type="text" name="sobrenome" required><br>
-
-        <label for="email">Email:</label>
-        <input type="email" name="email" required><br>
-
-        <label for="cargo">Cargo:</label>
-        <input type="text" name="cargo" required><br>
-
-        <button type="submit">Adicionar Membro</button>
-    </form>
+	<div class="group">
+	    <h2>Adicionar Novo Membro</h2>
+	    <form action="equipes" method="post">
+	        <label for="nome">Nome:</label>
+	        <input type="text" name="nome" required><br>
+	
+	        <label for="sobrenome">Sobrenome:</label>
+	        <input type="text" name="sobrenome" required><br>
+	
+	        <label for="email">Email:</label>
+	        <input type="email" name="email" required><br>
+	
+	        <label for="cargo">Cargo:</label>
+	        <input type="text" name="cargo" required><br>
+	
+	        <button type="submit">Adicionar Membro</button>
+	    </form>
+    </div>
     
     
-    <a href="index.jsp">Voltar</a>
+    <a class="voltar" href="index.jsp">Voltar</a>
 </body>
 </html>

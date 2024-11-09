@@ -1,0 +1,116 @@
+/* style.css */
+
+body {
+  font-family: 'Poppins', sans-serif; /* Substitua por sua fonte preferida */
+  background-color: #f8f8f8; /* Branco gelo */
+  margin: 0;
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px; /* Aumentando o espaçamento */
+}
+
+h1 {
+  text-align: center;
+  color: #333;
+}
+
+.navigation nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+}
+
+.navigation nav li {
+  margin: 0 20px; /* Aumentando o espaçamento entre os itens */
+}
+
+.navigation nav a {
+  text-decoration: none;
+  color: #333;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Aumentando a intensidade da sombra */
+  transition: background-color 0.3s ease;
+}
+
+.navigation nav a:hover {
+  background-color: #e0e0e0;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Aumentando a sombra no hover */
+}
+
+table, form {
+  width: 50%; /* Dividindo o espaço 50% para cada elemento */
+}
+
+table {
+  border-collapse: collapse; /* Removendo bordas duplicadas na tabela */
+  border: 1px solid #ddd; /* Borda para a tabela */
+  margin-left: 20px; /* Espaçamento entre a tabela e o formulário */
+}
+
+th, td {
+  padding: 10px; /* Espaçamento entre as células da tabela */
+  text-align: left; /* Alinhando texto à esquerda */
+}
+
+
+form {
+  display: flex; /* Organizando os elementos do formulário em colunas */
+  flex-direction: column; /* Elementos dispostos verticalmente */
+  margin-right: 20px; /* Espaçamento entre o formulário e a borda da página */
+}
+
+label {
+  margin-bottom: 5px; /* Espaçamento entre rótulos e inputs */
+}
+
+input[type="text"], input[type="date"] {
+  padding: 5px;
+  border: 1px solid #ddd;
+  border-radius: 3px; /* Arredondando cantos dos inputs */
+}
+
+button[type="submit"] {
+  padding: 10px 20px;
+  background-color: #4CAF50; /* Cor do botão */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer; /* Indicador de clique no mouse */
+  margin-top: 10px; /* Espaçamento entre o botão e o último input */
+}
+
+a {
+  text-decoration: none;
+  color: #333;
+  margin-top: 10px; /* Espaçamento entre o link e o formulário */
+}
+
+.group {
+	margin: 0 0 60px 0;
+}
+
+.voltar {
+  text-decoration: none; 
+  background-color: #007bff;
+  color: #fff; 
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer; 
+}
+
+.buttonAction {
+  text-decoration: none;
+  color: #0000ff; 
+  padding: 10px 20px;
+  border-radius: 5px; 
+  border: none; 
+  cursor: pointer;
+}
