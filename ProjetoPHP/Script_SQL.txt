@@ -1,0 +1,35 @@
+-- Database: projeto_php
+CREATE DATABASE projeto_php;
+USE projeto_php;
+
+-- Tabela de projetos
+CREATE TABLE projetos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    descricao TEXT,
+    data_inicio DATE,
+    data_fim DATE
+);
+
+-- Tabela de equipe
+CREATE TABLE equipe (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(100) NOT NULL,
+    sobrenome VARCHAR(100) NOT NULL,
+    email VARCHAR(50) NOT NULL,
+    cargo VARCHAR(50)
+);
+
+-- Tabela de tarefas
+CREATE TABLE tarefas (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nome VARCHAR(255) NOT NULL,
+    descricao TEXT NOT NULL,
+    data_inicio DATE NOT NULL,
+    data_fim DATE NOT NULL,
+    projeto_id INT NOT NULL,
+    dono_id INT,
+    concluida BOOLEAN DEFAULT FALSE,
+    FOREIGN KEY (projeto_id) REFERENCES projetos(id),
+    FOREIGN KEY (dono_id) REFERENCES equipe(id)
+);
